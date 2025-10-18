@@ -4,7 +4,7 @@ The divinity of quiche is seldom mentioned
 But,  
 For benedictine eggs we will grovel,  
 For truffles we will go ham,  
-For that white wale caviar we will literally kill.  
+For that white whale caviar we will literally kill.  
 And for why?   
 A bit of thick yellow emulsion over an unfertilized embryo?  
 A chunk of musky rot from the ground?  
