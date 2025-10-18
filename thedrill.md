@@ -1,6 +1,6 @@
 # The Drill
 
-Jake stared in no particular direction, although his attention’s focal point fell on the C-1300 DeWalt Extra Long Life power drill. He couldn’t let it see him looking. He was better than that
+Jake stared in no particular direction, although his attention’s focal point fell on the C-1300 DeWalt Extra Long Life power drill. He couldn’t let it see him looking. He was better than that.
 
 A woman who might be called handsome stopped near the tool, rifling through different drill batteries. She wore a long overcoat made of a felt-like material, khaki colored with what seemed to be a regular amount of buttons and pockets. Her hair was cut so that a strong, tanned neck connected head to coat collar unobstructed. As she scanned the shelf left to right, all the muscles in her neck flexed in a similar left to right fashion. The skin creased and curved with the movement of the muscles. It reminded Jake of a tightly drawn sail in a strong wind, each crease originating from where the sail’s corner and boom connect; or in the woman’s case, the nape of her neck.
 
