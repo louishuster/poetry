@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poetry</title>
+  <style>
+    body {
+      font-family: Garamond, 'Times New Roman', serif;
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 2rem 1rem 4rem;
+      cursor: pointer;
+      overflow-y: auto;
+    }
+
+    #poem {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.4; /* tighter for poetry */
+      text-align: left;
+      white-space: pre-wrap;
+    }
+
+    #poem p {
+      margin: 0.5em 0; /* subtle separation between stanzas */
+    }
+
+    #poem h1, #poem h2, #poem h3 {
+      text-align: center;
+      margin: 0.2em 0 0.8em 0;
+    }
+
+    @media (min-width: 600px) {
+      body {
+        padding: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="poem">Loading poems...</div>
+
+  <!-- Load Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script>
+    // Replace with your actual poem file URLs (raw markdown)
+    const poemFiles = [
+      "https://raw.githubusercontent.com/louishuster/poetry/main/la-femme-du-pape.md",
+      "https://raw.githubusercontent.com/louishuster/poetry/main/poem15-4-22.md",
+      "https://raw.githubusercontent.com/louishuster/poetry/main/quiche.md",
+      "https://raw.githubusercontent.com/louishuster/poetry/main/the-list.md",
+      "https://raw.githubusercontent.com/louishuster/poetry/main/sad-before-its-over.md",
+      "https://raw.githubusercontent.com/louishuster/poetry/main/thedrill.md"
+    ];
+
+    let poems = [];
+    let shownIndexes = [];
+
+    async function loadPoems() {
+      try {
+        const responses = await Promise.all(poemFiles.map(url => fetch(url).then(r => r.text())));
+        poems = responses;
+        showRandomPoem();
+      } catch (err) {
+        document.getElementById('poem').textContent = "Failed to load poems.";
+        console.error(err);
+      }
+    }
+
+    function showRandomPoem() {
+      if (poems.length === 0) return;
+
+      if (shownIndexes.length === poems.length) {
+        shownIndexes = []; // reset once all poems have been shown
+      }
+
+      let index;
+      do {
+        index = Math.floor(Math.random() * poems.length);
+      } while (shownIndexes.includes(index));
+
+      shownIndexes.push(index);
+      document.getElementById('poem').innerHTML = marked.parse(poems[index]);
+    }
+
+    document.body.addEventListener('click', showRandomPoem);
+
+    loadPoems();
+  </script>
+</body>
+</html>
