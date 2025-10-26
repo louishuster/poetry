@@ -97,7 +97,7 @@
       document.getElementById('poem').innerHTML = marked.parse(poems[index]);
     }
 
-    document.body.addEventListener('click', showRandomPoem);
+    document.documentElement.addEventListener('click', showRandomPoem);
 
     loadPoems();
   </script>
